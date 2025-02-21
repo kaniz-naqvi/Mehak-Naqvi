@@ -1,0 +1,52 @@
+#projects > h2 {
+  margin: 20px 0;
+  display: block;
+}
+.projects {
+  padding: 0 30px;
+}
+.detail > ul {
+  padding: 0 40px;
+}
+.proj {
+  padding: 20px 0;
+}
+.detail strong {
+  border-bottom: #333 1px solid;
+  margin: 5px;
+}
+.detail {
+  line-height: 24px;
+  font-size: larger;
+  width: 40%;
+}
+.proj {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60dvh;
+}
+.proj .img {
+  width: 60%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.img > img {
+  width: 100%;
+  height: 110%;
+  object-fit: contain;
+  object-position: center;
+}
+.proj .img:hover {
+  scale: 1.05;
+}
+@media (max-width: 800px) {
+  .proj {
+    flex-direction: column-reverse;
+    height: max-content;
+  }
+  .proj .img {
+    width: 120%;
+  }
+}
