@@ -68,7 +68,9 @@ function renderProjects() {
               </ul>
             </article>
             <div class="img">
+            <a href="${project.liveDemo}" target="_blank">
               <img src="${project.image}" alt="${project.name}" />
+              </a>
             </div>
           </div>
         `
