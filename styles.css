@@ -44,7 +44,7 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  background-image: url("/images/bg-img.png");
+  background-image: url("images/bg-img.png");
   background-position: center;
   background-size: cover;
 }
