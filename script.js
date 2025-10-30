@@ -1,5 +1,5 @@
 // Navbar Links (Reusable)
-const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
+const navItems = ["Home", "About", "Skills", "Projects", "Contact", "Services"];
 const navigators = document.querySelector(".navigators");
 
 if (navigators) {
@@ -53,8 +53,9 @@ document.querySelectorAll(".social-icons").forEach((element) => {
 
 // Skills Icons Renderer
 const skills = [
-  { class: "ri-html5-fill html", name: "HTML" },
-  { class: "ri-css3-fill css", name: "CSS" },
+  //<i class="ri-database-line"></i>
+  { class: "ri-nodejs-line express-js", name: "Express JS" },
+  { class: "ri-database-line PostgreSQL", name: "PostgreSQL" },
   { class: "ri-tailwind-css-fill tailwind", name: "Tailwind CSS" },
   { class: "ri-bootstrap-fill bootstrap", name: "Bootstrap" },
   { class: "ri-mac-line mac", name: "Responsive Web Design" },
@@ -77,27 +78,19 @@ function renderIcons(containerSelector, icons) {
 renderIcons(".icons.skills-icon", skills);
 
 document.querySelector(".intro").innerHTML = `
-  <p>
-              Hi, I’m Mehak—a curious <span class="primary">coder</span> with a
-              passion for building things that work (and sometimes things that
-              don’t, but that’s part of the fun). I love
-              <span class="primary">solving problems</span>, designing intuitive
-              interfaces, and <span class="primary">crafting meaningful</span>
-              digital experiences.
+<p>
+              I'm <strong class="primary">Mehak Fatima Naqvi</strong>, a
+              <strong class="primary">Full Stack Developer</strong> focused on creating
+              responsive, scalable, and user-friendly web applications. I
+              specialize in building modern interfaces using
+              <strong class="primary">React</strong>, crafting efficient backends with
+              <strong class="primary">Node.js</strong>, and ensuring seamless user experiences
+              through clean UI and intuitive UX design.
             </p>
             <p>
-              Currently diving deep into
-              <span class="primary">MERN Stack</span> development, I’m leveling
-              up my skills in <span class="primary">React</span>,
-              <span class="primary">Node.js</span>, and
-              <span class="primary">responsive design</span>. When I’m not
-              coding or obsessing over K-dramas, you’ll probably find me
-              figuring out how to make my
-              <span class="primary">next project</span> just a little bit
-              cooler.
+              My expertise lies in <span class="primary">translating complex ideas into elegant</span>,
+              maintainable code. I collaborate with startups and small
+              businesses to bring their digital products to life — balancing
+              performance, aesthetics, and purpose in every project.
             </p>
-            <p>
-              Always learning, always creating. Let’s build something
-              <span class="primary">awesome</span> together!
-            </p>
-            `;
+`;

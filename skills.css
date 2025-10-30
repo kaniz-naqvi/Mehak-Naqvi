@@ -12,14 +12,17 @@
 }
 
 /* Define individual colors and set a CSS variable */
-.html,
+.express-js {
+  color: #509941;
+  --tooltip-bg: #509941;
+}
 .git {
   color: #ff0000;
   --tooltip-bg: #ff0000;
 }
-.css {
-  color: #2091eb;
-  --tooltip-bg: #2091eb;
+.PostgreSQL {
+  color: #2f5e8d;
+  --tooltip-bg: #2f5e8d;
 }
 .tailwind {
   color: #25afe6;

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./nav.css" />
     <link rel="stylesheet" href="./skills.css" />
     <link rel="stylesheet" href="./social.css" />
+    <link rel="stylesheet" href="./services.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -51,11 +52,22 @@
     <main>
       <!-- Home Section -->
       <section id="home">
-        <div class="hover-effect main-text">
-          <a href="#projects" class="text-larger">
-            <h1>Hi, I am a web developer.</h1>
-          </a>
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+          <h1 class="hero-title">
+            I help
+            <span class="primary">startups & small businesses</span> build
+            <br />
+            responsive and modern web apps.
+          </h1>
+
+          <p class="hero-subtitle">
+            Full stack Developer • React • UI/UX Enthusiast
+          </p>
+          <a href="#projects" class="btn primary-btn">View My Work</a>
         </div>
+
         <div class="arrow-down">
           <a href="#about">↓</a>
         </div>
@@ -93,6 +105,14 @@
           </div>
         </div>
       </section>
+
+      <!-- Services Section -->
+      <div id="services">
+        <h2>Services</h2>
+        <div class="services-grid">
+          <!-- dynamically populated by JS -->
+        </div>
+      </div>
 
       <!-- Projects Section -->
       <div id="projects">

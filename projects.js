@@ -1,3 +1,60 @@
+// --- Services Data ---
+const services = [
+  {
+    title: "Frontend Development",
+    icon: "ri-computer-line",
+    description:
+      "I design and build responsive business websites using React and Tailwind CSS or Bootstrap focused on performance, clean structure, and engaging user experience.",
+  },
+  {
+    title: "Backend Engineering",
+    icon: "ri-database-2-line",
+    description:
+      "I create secure and scalable backends using Node.js, Express, and PostgreSQL to handle complex data operations and automation needs.",
+  },
+  {
+    title: "Full Stack Solutions",
+    icon: "ri-stack-line",
+    description:
+      "I handle frontend, backend, and basic DevOps (hosting, CI/CD) for complete project delivery from concept to deployment .",
+  },
+  {
+    title: "UI/UX Design Thinking",
+    icon: "ri-palette-line",
+    description:
+      "I enhance existing websites’ usability and design for better conversions and smoother user journeys.",
+  },
+  {
+    title: "Portfolio & Personal Branding",
+    icon: "ri-profile-line",
+    description:
+      "I design modern portfolio websites and landing pages that help professionals and businesses attract clients and showcase services effectively.",
+  },
+  {
+    title: "Maintenance & Feature Enhancements",
+    description:
+      "I offer long-term support for existing websites bug fixes, performance improvements, and new feature integration.",
+  },
+];
+
+// --- Render Services ---
+function renderServices() {
+  const servicesContainer = document.querySelector(".services-grid");
+  if (!servicesContainer) return;
+
+  servicesContainer.innerHTML = services
+    .map(
+      (service) => `
+      <div class="service-card">
+        <i class="${service.icon} service-icon"></i>
+        <h3 class="service-title">${service.title}</h3>
+        <p class="service-description">${service.description}</p>
+      </div>
+    `
+    )
+    .join("");
+}
+
 const projects = [
   {
     name: "Amazon Clone",
@@ -43,6 +100,7 @@ const projects = [
     liveDemo: "https://movie-app-xi-steel-47.vercel.app/",
   },
 ];
+
 function renderProjects() {
   const projectsContainer = document.querySelector(".projects");
 
@@ -50,6 +108,11 @@ function renderProjects() {
     .map(
       (project) => `
           <div class="proj">
+          <div class="img">
+            <a href="${project.liveDemo}" target="_blank">
+              <img src="${project.image}" alt="${project.name}" />
+              </a>
+            </div>
             <article>
               <h3>${project.name}</h3>
               <ul>
@@ -67,11 +130,7 @@ function renderProjects() {
             }" target="_blank" class="primary">Live Demo</a>
               </ul>
             </article>
-            <div class="img">
-            <a href="${project.liveDemo}" target="_blank">
-              <img src="${project.image}" alt="${project.name}" />
-              </a>
-            </div>
+            
           </div>
         `
     )
@@ -79,4 +138,7 @@ function renderProjects() {
 }
 
 // Call the function after DOM loads
-document.addEventListener("DOMContentLoaded", renderProjects);
+document.addEventListener("DOMContentLoaded", () => {
+  renderProjects();
+  renderServices();
+});
