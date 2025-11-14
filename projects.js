@@ -72,6 +72,21 @@ const projects = [
     liveDemo: "https://kaniz-naqvi.github.io/Amazon/",
   },
   {
+    name: "LikhSpire",
+    image: "images/Portfolio/home.png", 
+    features: [
+      'Full <span class="primary">CRUD functionality</span> for blog posts',
+      'Users can <span class="primary">write, edit, view, and delete</span> their blogs',
+      'Responsive UI built manually using <span class="primary">Bootstrap</span>',
+      'Backend powered by <span class="primary">Node.js, Express, PostgreSQL</span>',
+      'UI mimics <span class="primary">Medium’s front page</span> layout',
+      'Project showcases <span class="primary">prompt engineering & creative naming</span>'
+    ],
+    techStack: "HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, PostgreSQL",
+    github: "https://github.com/kaniz-naqvi/likhspire",
+    liveDemo: ""
+  },
+  {
     name: "Contact Manager",
     image: "images/Portfolio/3.png",
     features: [
