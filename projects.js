@@ -84,7 +84,7 @@ const projects = [
     ],
     techStack: "HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, PostgreSQL",
     github: "https://github.com/kaniz-naqvi/likhspire",
-    liveDemo: ""
+    liveDemo: "https://github.com/kaniz-naqvi/LikhSpire?tab=readme-ov-file#home-page"
   },
   {
     name: "Contact Manager",
