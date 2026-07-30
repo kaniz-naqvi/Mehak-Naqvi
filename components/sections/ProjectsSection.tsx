@@ -1,42 +1,22 @@
 "use client";
 
-import { useState, useEffect, forwardRef, Ref } from "react";
+import { useState, forwardRef, Ref } from "react";
 import { Lightbulb } from "phosphor-react";
 
 import Heading from "../ui/Heading";
 import SubHeadingContainer, { SimplePara } from "../ui/SubHeadingContainer";
 import ProjectCard from "../ui/ProjectCard";
-import { projects, ProjectItem } from "@/config/user-data/projects";
+import { projects } from "@/config/user-data/projects";
 import Button from "../ui/Button";
 import Loader from "../ui/Loader";
 
-const ProjectsSection = forwardRef<
-  HTMLElement,
-  { showAllByDefault?: boolean }
->(({ showAllByDefault = false }, ref: Ref<HTMLElement>) => {
+
+const ProjectsSection = forwardRef<HTMLElement, { showAllByDefault?: boolean }>(
+  ({ showAllByDefault = false }, ref: Ref<HTMLElement>) => {
     const [selectedFilter, setSelectedFilter] = useState("All");
     const [showAll, setShowAll] = useState(showAllByDefault);
     const [isNavigating, setIsNavigating] = useState(false);
-    console.log("showAll", showAll);
 
-    // client-only responsive state (safe)
-    const [windowWidth, setWindowWidth] = useState<number | null>(null);
-
-    // -----------------------------
-    // Window tracking (client only)
-    // -----------------------------
-    useEffect(() => {
-      const handleResize = () => setWindowWidth(window.innerWidth);
-
-      handleResize();
-      window.addEventListener("resize", handleResize);
-
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    // -----------------------------
-    // Categories
-    // -----------------------------
     const allCategories = Array.from(
       new Set(projects.flatMap((p) => p.categories)),
     );
@@ -48,14 +28,6 @@ const ProjectsSection = forwardRef<
         ? projects
         : projects.filter((p) => p.categories.includes(selectedFilter));
 
-    // -----------------------------
-    // SSR-safe default count
-    // -----------------------------
-    const defaultCount = windowWidth !== null && windowWidth >= 1024 ? 3 : 2;
-
-    // -----------------------------
-    // UI
-    // -----------------------------
     return (
       <section id="projects" ref={ref}>
         <div className="max-w-7xl mx-auto md:py-4 p-2">
@@ -109,27 +81,31 @@ const ProjectsSection = forwardRef<
 
           {isNavigating && <Loader />}
 
-          {/* PROJECT GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => {
-              const isHidden = !showAll && index >= defaultCount;
-
-              return (
-                <div
-                  key={project.id}
-                  className={isHidden ? "sr-only" : "block"} // sr-only keeps it in DOM but invisible
-                >
-                  <ProjectCard
-                    {...project}
-                    onNavigate={() => setIsNavigating(true)}
-                  />
-                </div>
-              );
-            })}
+          {/* PROJECT GRID — all projects always in DOM for SEO */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {filteredProjects.map((project, index) => (
+              <div
+                key={project.id}
+                className={
+                  showAll
+                    ? "block"
+                    : index < 2
+                      ? "block"
+                      : index === 2
+                        ? "hidden md:block"
+                        : "hidden"
+                }
+              >
+                <ProjectCard
+                  {...project}
+                  onNavigate={() => setIsNavigating(true)}
+                />
+              </div>
+            ))}
           </div>
 
-          {/* SEE MORE BUTTON */}
-          {filteredProjects.length > defaultCount && (
+          {/* SEE MORE / SEE LESS */}
+          {filteredProjects.length > 2 && (
             <div className="flex justify-center mt-6">
               <Button
                 onClick={() => setShowAll((prev) => !prev)}
