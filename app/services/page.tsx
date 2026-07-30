@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar showNavLinks={false} />
+      <Navbar portfolioForJob={false} />
       <main className="pt-20 pb-8 px-2 space-y-16">
         <ServicesSection />
         <ContactSection />

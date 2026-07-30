@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar showNavLinks={false} />
+      <Navbar portfolioForJob={false} />
       <main className="pt-20 pb-8 px-2">
         <ProjectsSection showAllByDefault={true} />
       </main>
