@@ -70,7 +70,7 @@ export const projects: ProjectItem[] = [
       TECH_STACK.nodejs,
       TECH_STACK.express,
     ],
-    liveUrl: "https://app.leadlyft.com",
+    liveUrl: undefined,
     githubUrl: undefined,
     previewImage: "projects/leadlyft-preview-v3.png",
     isClientProject: true,

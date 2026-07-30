@@ -6,6 +6,10 @@ import { SimplePara } from "@/components/ui/SubHeadingContainer";
 import { highlightTechs, projects } from "@/config/user-data/projects";
 import Link from "next/link";
 
+const BASE_URL = (
+  process.env.NEXT_PUBLIC_BASE_URL || "https://mehak-naqvi.vercel.app"
+).replace(/\/$/, "");
+
 import { Metadata } from "next";
 import {
   Reveal,
@@ -27,22 +31,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Project Not Found" };
   }
 
-  // Ensure previewImage is a string; fallback to a default if missing
-  const previewImage = project.previewImage || "/default-og.png";
+  const previewImagePath = project.previewImage || "/photo-gallery/portfolio.jpg";
+  const previewImageUrl = previewImagePath.startsWith("http")
+    ? previewImagePath
+    : `${BASE_URL}/${previewImagePath.replace(/^\//, "")}`;
+
+  const canonicalUrl = `${BASE_URL}/projects/${project.id}`;
 
   return {
     title: `${project.title} | Miss Kniz Portfolio`,
     description: project.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: project.title,
       description: project.description,
-      url: `https://mehak-naqvi.vercel.app/projects/${project.id}`,
+      url: canonicalUrl,
       images: [
         {
-          url: previewImage,
+          url: previewImageUrl,
           width: 1200,
           height: 630,
-          alt: `${project.title} Case Study`,
+          alt: `${project.title} — Case Study by Mehak Fatima Naqvi`,
         },
       ],
       type: "article",
@@ -51,7 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: project.title,
       description: project.description,
-      images: [previewImage],
+      images: [previewImageUrl],
     },
   };
 }
@@ -182,7 +193,7 @@ export default async function ProjectPage({
         >
           <div>
             <Heading
-              as="h3"
+              as="h2"
               normalText="Project overview"
               className=" uppercase"
               center={false}
@@ -225,7 +236,7 @@ export default async function ProjectPage({
           <div className="bg-primary-light py-16">
             <Reveal className="max-w-5xl mx-auto px-4" delay={0.08}>
               <Heading
-                as="h3"
+                as="h2"
                 normalText="Technical challenges"
                 className=" uppercase"
               />
@@ -262,7 +273,7 @@ export default async function ProjectPage({
           >
             <div>
               <Heading
-                as="h3"
+                as="h2"
                 normalText="Architecture"
                 className="text-left uppercase"
               />
@@ -286,7 +297,7 @@ export default async function ProjectPage({
           <div className="bg-primary-light py-16">
             <Reveal className="max-w-5xl mx-auto px-4" delay={0.08}>
               <Heading
-                as="h3"
+                as="h2"
                 normalText="Development process"
                 className=" uppercase"
               />
@@ -317,7 +328,7 @@ export default async function ProjectPage({
         {caseStudy?.features && caseStudy.features.length > 0 && (
           <Reveal className="max-w-5xl mx-auto py-16 px-4" delay={0.08}>
             <Heading
-              as="h3"
+              as="h2"
               normalText="Key features built"
               className=" uppercase"
             />
@@ -364,7 +375,7 @@ export default async function ProjectPage({
         {caseStudy?.outcomes && caseStudy.outcomes.length > 0 && (
           <div className="bg-primary-light text-center py-16">
             <Reveal className="max-w-5xl mx-auto px-4" delay={0.08}>
-              <Heading as="h3" normalText="Outcomes" className=" uppercase" />
+              <Heading as="h2" normalText="Outcomes" className=" uppercase" />
               <SimplePara className="max-w-xl mb-8">
                 What the project delivered.
               </SimplePara>
@@ -426,6 +437,59 @@ export default async function ProjectPage({
           </div>
         )}
       </section>
+
+      {/* Structured data: SoftwareApplication + BreadcrumbList for AI/SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: project.title,
+            description: project.description,
+            applicationCategory: "WebApplication",
+            operatingSystem: "Web",
+            author: {
+              "@type": "Person",
+              name: "Mehak Fatima Naqvi",
+              alternateName: "Miss Kniz",
+              url: BASE_URL,
+            },
+            ...(project.liveUrl && { url: project.liveUrl }),
+            programmingLanguage: project.technologies,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: BASE_URL,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Projects",
+                item: `${BASE_URL}/#projects`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: project.title,
+                item: `${BASE_URL}/projects/${project.id}`,
+              },
+            ],
+          }),
+        }}
+      />
+
       <Footer className="mb-0" />
     </>
   );

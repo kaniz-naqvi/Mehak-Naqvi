@@ -104,7 +104,7 @@ export const socialLinks = {
 // ========================================
 // 👇 Edit everything below this line 👇
 
-export const portfolioForJob = true; // can be for freelancing the service section and others will work
+export const portfolioForJob = false; // can be for freelancing the service section and others will work
 
 const aboutData: AboutData = {
   // ---------- Basic Info ----------
@@ -113,20 +113,19 @@ const aboutData: AboutData = {
   title: "Full Stack Developer",
   showCurtain: true, // Set to false to hide decorative curtains in Hero section
 
-  topText: "Available for Remote Opportunities",
-  highlightsFromTopText: ["Remote Opportunities"],
+  topText: "Available for New Projects",
+  highlightsFromTopText: ["New Projects"],
 
   // ---------- Hero Section ----------
   hero: {
     headline: "Turning Ideas Into High Performing Digital Products",
     highlightedWords: ["Ideas Into", "Digital Products"], // Optional: words in headline to highlight
-    primaryCtaText: "View Resume", // e.g., "Hire Me", "Download Resume"
-    primaryCtaLink:
-      "https://docs.google.com/document/d/1RWiaPjxjxr_cjxwo3uDriRe3rav1rmTasqtgRGrpz80/edit?usp=sharing",
+    primaryCtaText: "Start a Project",
+    primaryCtaLink: "mailto:mehak313naqvi@gmail.com?subject=Project%20Inquiry",
     secondaryCtaText: "Book a Call",
     secondaryCtaLink: "https://calendar.app.google/fpRU2qDXNfbg4BSK8",
     heroPara:
-      "I Help Startups and freelance teams Ship Fast, Scalable & High-Converting Web Apps", // can include escape char \n for line breaks if needed
+      "I help startups and product teams build full-stack web applications — from database design and backend APIs to responsive, polished frontends. Available for freelance projects.",
   },
 
   // ---------- About Me Section ----------
@@ -136,15 +135,15 @@ const aboutData: AboutData = {
       highlightedText: "to strong {Developer}",
     },
     paragraphs: [
-      "I'm Mehak, a Frontend Engineer who genuinely enjoys the puzzle of building things that work beautifully. Two years in, and I still get excited when a performance fix shreds load time or a UI finally clicks into place.",
+      "I'm Mehak, a Full-Stack Developer who genuinely enjoys the puzzle of building things that work beautifully end-to-end. From designing a database schema to shipping a polished frontend — I handle the full stack, and I still get excited when a performance fix shreds load time.",
       "When I'm not coding, you'll find me watching K-dramas, exploring nature, or doing what I love most, sitting on the rooftop at evening with a cup of milk tea, watching the world slow down. That quiet is where my best ideas come from.",
     ],
     skills: ["React", "TypeScript", "TailwindCSS", "Node.js", "Next.js"],
     interests: ["Open Source", "Tech Writing", "UI/UX Design"],
     highlightedAboutRole: [
-      "Frontend Engineer",
-      "PERN-stack Developer",
-      "React & Next.js Specialist",
+      "Full-Stack Developer",
+      "React & Next.js",
+      "Node.js & PostgreSQL",
     ],
     aboutCTA: "View my Journey",
     aboutSecondaryCTA: {
