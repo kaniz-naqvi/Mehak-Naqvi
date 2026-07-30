@@ -29,10 +29,10 @@ export const cherishedLivesCaseStudy: CaseStudy = {
   bgImageUrl: "projects/case-study/cherished-lives.png",
 
   introduction:
-    "Cherished Lives is a memorial platform built for families to keep the memories of loved ones alive — rich tribute pages, photo and video galleries, and a space for friends and family to share remembrances. The platform is production-ready across staging and main branches, built end-to-end by me as the sole developer across three independently deployed applications.",
+    "Cherished Lives is a memorial platform built for families to keep the memories of loved ones alive: rich tribute pages, photo and video galleries, and a space for friends and family to share remembrances. The platform is production-ready across staging and main branches, built end to end by me as the sole developer across three independently deployed applications.",
 
   overview:
-    "As the sole developer, I built Cherished Lives end-to-end across three separate applications — the public memorial site, an internal admin panel, and a dedicated admin API. My work covered authentication flows, profile management, media handling, access control, real-time updates, and the admin tooling used to manage users and content behind the scenes.",
+    "As the sole developer, I built Cherished Lives end to end across three separate applications: the public memorial site, an internal admin panel, and a dedicated admin API. My work covered authentication flows, profile management, media handling, access control, real-time updates, and the admin tooling used to manage users and content behind the scenes.",
 
   overviewImage: "/projects/case-study/cherished-lives-overview.png",
 
@@ -86,7 +86,7 @@ export const cherishedLivesCaseStudy: CaseStudy = {
   process: [
     {
       title: "Designing the data model first",
-      body: "Before writing any UI, I worked out the Prisma schema in detail — 17 models covering profiles, media, tributes, access control, invitations, and tags. Getting this right early meant the API and UI work had a stable foundation to build on.",
+      body: "Before writing any UI, I worked out the Prisma schema in detail: 17 models covering profiles, media, tributes, access control, invitations, and tags. Getting this right early meant the API and UI work had a stable foundation to build on.",
     },
     {
       title: "Building auth before anything else",
@@ -94,7 +94,7 @@ export const cherishedLivesCaseStudy: CaseStudy = {
     },
     {
       title: "One feature slice at a time",
-      body: "Each feature was built fully — API route, RTK Query integration, UI components, loading states, error handling — before moving on. This kept the product stable and prevented half-finished states from piling up.",
+      body: "Each feature was built fully (API route, RTK Query integration, UI components, loading states, error handling) before moving on. This kept the product stable and prevented half-finished states from piling up.",
     },
     {
       title: "Admin tooling in parallel",
@@ -113,7 +113,7 @@ export const cherishedLivesCaseStudy: CaseStudy = {
     },
     {
       title: "Media and slideshows",
-      body: "Upload photos and videos, organize them into galleries, and create memorial slideshows with background audio — all processed and stored on DigitalOcean Spaces.",
+      body: "Upload photos and videos, organize them into galleries, and create memorial slideshows with background audio, all processed and stored on DigitalOcean Spaces.",
     },
     {
       title: "QR and NFC tag linking",
@@ -133,7 +133,7 @@ export const cherishedLivesCaseStudy: CaseStudy = {
   outcomes: [
     {
       value: "3 apps",
-      desc: "Built sole-developer across the public platform, admin UI, and admin API — all independently deployed",
+      desc: "Built sole-developer across the public platform, admin UI, and admin API, all independently deployed",
     },
     {
       value: "4 languages",
@@ -146,5 +146,5 @@ export const cherishedLivesCaseStudy: CaseStudy = {
   ],
 
   reflection:
-    "Cherished Lives was one of the more meaningful projects I have worked on — both technically and in what it represents. Building something that families will use during difficult moments pushed me to care more about reliability and clarity than I might have otherwise. Every auth edge case, every missing loading state, and every confusing flow mattered more than usual. That kept the bar high throughout.",
+    "Cherished Lives was one of the more meaningful projects I have worked on, both technically and in what it represents. Building something that families will use during difficult moments pushed me to care more about reliability and clarity than I might have otherwise. Every auth edge case, every missing loading state, and every confusing flow mattered more than usual. That kept the bar high throughout.",
 };

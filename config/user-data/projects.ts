@@ -105,7 +105,7 @@ export const projects: ProjectItem[] = [
     previewImage: "projects/cherished-lives-preview.png",
     isClientProject: true,
     description:
-      "A multi-tenant memorial platform built sole-developer across 3 apps — public site, admin UI, and admin API — with multilingual support and white-label architecture.",
+      "A multi-tenant memorial platform built sole-developer across 3 apps (public site, admin UI, and admin API) with multilingual support and white-label architecture.",
     role: "Full-stack Developer",
     context: "Web application development",
     period: "2025 – Present",

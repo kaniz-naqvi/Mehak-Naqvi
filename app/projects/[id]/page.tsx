@@ -113,7 +113,7 @@ export default async function ProjectPage({
           />
 
           <div className="relative h-full z-10">
-            <div className="h-full w-full bg-linear-to-t text-center from-background via-background/50 to-background/50 flex flex-col items-center justify-between">
+            <div className="h-full w-full bg-linear-to-t text-center from-background via-background/80 to-background/20 flex flex-col items-center justify-between">
               <div className="w-full">
                 <Navbar
                   backToProjects={true}
@@ -123,13 +123,13 @@ export default async function ProjectPage({
                 />
               </div>
 
-              <Reveal delay={0.12} className="flex flex-col items-center gap-3">
+              <Reveal delay={0.12} className="flex flex-col items-center gap-3 drop-shadow-lg">
                 <Heading
                   normalText={project.title}
                   as="h1"
                   className="text-center"
                 />
-                <SimplePara>
+                <SimplePara className="text-foreground/90">
                   <TextReveal text={project.description || ""} delay={0.12} />
                 </SimplePara>
               </Reveal>
@@ -282,7 +282,7 @@ export default async function ProjectPage({
 
             <div className="max-w-full">
               {caseStudy.architecture?.structure ? (
-                <pre className="text-sm font-mono bg-zinc-900 text-zinc-100 p-4 rounded-xl overflow-x-auto whitespace-pre max-w-full">
+                <pre className="text-sm font-mono bg-zinc-900 text-zinc-100 p-4 rounded-xl overflow-auto whitespace-pre max-h-80 max-w-full code-block">
                   {caseStudy.architecture.structure}
                 </pre>
               ) : null}

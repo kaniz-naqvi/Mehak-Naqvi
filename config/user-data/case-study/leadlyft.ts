@@ -4,7 +4,7 @@ export const leadlyftCaseStudy: CaseStudy = {
   bgImageUrl: "projects/case-study/leadlyft.jpg",
 
   introduction:
-    "LeadLyft was built by an independent life and performance coach who wanted a real product — not a patchwork of spreadsheets and booking tools — to manage their clients and grow their practice. What started as a single-coach platform grew into a multi-coach SaaS with 500+ registered users, monthly subscription plans for individuals, and enterprise licenses sold to companies for their employees.",
+    "LeadLyft was built by an independent life and performance coach who wanted a real product, not a patchwork of spreadsheets and booking tools, to manage their clients and grow their practice. What started as a single-coach platform grew into a multi-coach SaaS with 500+ registered users, monthly subscription plans for individuals, and enterprise licenses sold to companies for their employees.",
 
   overview:
     "I joined the project after the initial MVP was shipped and took ownership of the frontend architecture as the product scaled. My work covered building out the coaching and analytics workflows, standardizing the component system across the application, integrating APIs, handling complex state management, and improving performance as the feature set and user base grew.",
@@ -95,7 +95,7 @@ utils/
     },
     {
       value: "5 roles",
-      desc: "Coaches, clients, practitioners, organizations, and admins — all in one system",
+      desc: "Coaches, clients, practitioners, organizations, and admins across one system",
     },
     {
       value: "B2B + B2C",

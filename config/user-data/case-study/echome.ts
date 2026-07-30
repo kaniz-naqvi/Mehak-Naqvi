@@ -4,10 +4,10 @@ export const echomeCaseStudy: CaseStudy = {
   bgImageUrl: "projects/case-study/echome.jpg",
 
   introduction:
-    "EchoMe is a resume builder SaaS I co-built from scratch — a tool designed to help job seekers create recruiter-ready resumes in minutes. The core idea: most resume builders are either too rigid or too complex. EchoMe gives users a live preview editor, multiple professional templates, and PDF/DOCX export, all in one clean flow.",
+    "EchoMe is a resume builder SaaS I co-built from scratch, designed to help job seekers create recruiter-ready resumes in minutes. The core idea: most resume builders are either too rigid or too complex. EchoMe gives users a live preview editor, multiple professional templates, and PDF/DOCX export, all in one clean flow.",
 
   overview:
-    "I led the full-stack development of EchoMe — architecture decisions, authentication system, the resume editor state, export pipeline, and the admin panel. The product is live on Vercel with email and Google OAuth auth, real-time editing backed by Redux, and a Prisma/PostgreSQL database handling resumes, users, and content.",
+    "I led the full-stack development of EchoMe: architecture decisions, authentication system, the resume editor state, export pipeline, and the admin panel. The product is live on Vercel with email and Google OAuth auth, real-time editing backed by Redux, and a Prisma/PostgreSQL database handling resumes, users, and content.",
 
   overviewImage: "/projects/echome.png",
 
@@ -37,7 +37,7 @@ lib/              (Prisma, NextAuth, export helpers, Zod schemas)`,
   challenges: [
     {
       title: "Live preview editor with complex state",
-      body: "The resume editor tracks dozens of nested fields — experience, education, projects, skills, custom sections, drag-and-drop ordering — all updating a live preview in real time. Keeping Redux state clean and avoiding unnecessary re-renders on every keystroke required careful slice design and memoization.",
+      body: "The resume editor tracks dozens of nested fields (experience, education, projects, skills, custom sections, drag-and-drop ordering), all updating a live preview in real time. Keeping Redux state clean and avoiding unnecessary re-renders on every keystroke required careful slice design and memoization.",
     },
     {
       title: "Template-aware export pipeline",
@@ -45,7 +45,7 @@ lib/              (Prisma, NextAuth, export helpers, Zod schemas)`,
     },
     {
       title: "Dual authentication system",
-      body: "The app uses both NextAuth (for Google OAuth) and a custom JWT flow (for email/password with verification and refresh token rotation). Keeping these two systems consistent — same session shape, same role checks, same middleware — without coupling them took careful design.",
+      body: "The app uses both NextAuth (for Google OAuth) and a custom JWT flow (for email/password with verification and refresh token rotation). Keeping these two systems consistent (same session shape, same role checks, same middleware) without coupling them took careful design.",
     },
     {
       title: "Public resume sharing",
@@ -56,7 +56,7 @@ lib/              (Prisma, NextAuth, export helpers, Zod schemas)`,
   process: [
     {
       title: "Architecture first",
-      body: "Before writing any UI, I defined the Redux slice shape, the Prisma schema, and the route structure. A 51KB CLAUDE.md engineering guidelines file documented every decision — max file sizes, no console.log, centralized routes, strict hook boundaries.",
+      body: "Before writing any UI, I defined the Redux slice shape, the Prisma schema, and the route structure. A 51KB CLAUDE.md engineering guidelines file documented every decision: max file sizes, no console.log, centralized routes, strict hook boundaries.",
     },
     {
       title: "Editor and state before templates",
@@ -79,15 +79,15 @@ lib/              (Prisma, NextAuth, export helpers, Zod schemas)`,
     },
     {
       title: "3 professional templates",
-      body: "Brand, Minimal, and Classic — each with its own layout, typography, and optional features like education sidebar and skill categorization toggle.",
+      body: "Brand, Minimal, and Classic, each with its own layout, typography, and optional features like education sidebar and skill categorization toggle.",
     },
     {
       title: "PDF and DOCX export",
-      body: "Export to both formats with template-aware rendering — the exported file matches what the user sees on screen, not a generic fallback.",
+      body: "Export to both formats with template-aware rendering, so the exported file matches what the user sees on screen rather than a generic fallback.",
     },
     {
       title: "Public resume sharing",
-      body: "Every resume gets a public URL that renders a clean read-only version — shareable with recruiters without requiring any login.",
+      body: "Every resume gets a public URL that renders a clean read-only version, shareable with recruiters without requiring any login.",
     },
     {
       title: "Authentication and dashboard",
@@ -117,5 +117,5 @@ lib/              (Prisma, NextAuth, export helpers, Zod schemas)`,
   ],
 
   reflection:
-    "EchoMe pushed me into areas I had not spent much time in before — document generation, complex nested editor state, and a dual-auth system. The constraint of building something I would actually want to use kept the quality bar high throughout.",
+    "EchoMe pushed me into areas I had not spent much time in before: document generation, complex nested editor state, and a dual-auth system. The constraint of building something I would actually want to use kept the quality bar high throughout.",
 };

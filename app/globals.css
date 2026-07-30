@@ -4,11 +4,11 @@
 
 :root {
   --background: #ffffff;
-  --foreground: 14 5 22;
+  --foreground: 30 18 48;
   --primary: #7b2cbf;
   --primary-light: #7a2cbf0f;
   --primary-dark: #4a148c;
-  --black-light: #666666;
+  --black-light: #7a7a8f;
   --glass: rgba(255, 255, 255, 0.05);
 
   --font-serif: "Alegreya", serif;
@@ -33,7 +33,6 @@
   --color-black-light: var(--black-light);
   --color-glass: var(--glass);
 
-
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-serif);
 }
@@ -45,7 +44,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 
 h1,
 h2,
@@ -173,6 +171,34 @@ button {
 
 .overflow-y-auto {
   scrollbar-color: var(--primary) transparent;
+  scrollbar-width: thin;
+}
+
+/* Architecture code block scrollbar */
+.code-block::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.code-block::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.code-block::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.code-block::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.code-block::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.code-block {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
   scrollbar-width: thin;
 }
 
