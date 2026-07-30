@@ -75,7 +75,7 @@ export const projects: ProjectItem[] = [
     previewImage: "projects/leadlyft-preview-v3.png",
     isClientProject: true,
     description:
-      "A coaching platform for executives to improve work and life performance.",
+      "A coaching SaaS built for a life coach who needed a real product to manage 500+ clients and sell enterprise plans to companies.",
     role: "Frontend-focused full-stack Developer",
     context: "Website development",
     period: "Early 2025",
@@ -104,7 +104,7 @@ export const projects: ProjectItem[] = [
     previewImage: "projects/cherished-lives-preview.png",
     isClientProject: true,
     description:
-      "An online memorial platform where users can keep the memories of loved ones.",
+      "A multi-tenant memorial platform built sole-developer across 3 apps — public site, admin UI, and admin API — with multilingual support and white-label architecture.",
     role: "Full-stack Developer",
     context: "Web application development",
     period: "2025 – Present",
@@ -127,7 +127,7 @@ export const projects: ProjectItem[] = [
     period: "Late 2024",
     context: "Desktop → Mobile UX",
     description:
-      "A web app that helps users plan daily meals and recipes easily.",
+      "Contract frontend role: transformed a desktop-only meal planning SaaS into a fully responsive mobile experience.",
     caseStudy: prepAndPlateCaseStudy,
   },
   {
@@ -154,7 +154,7 @@ export const projects: ProjectItem[] = [
     period: "Mid 2025",
     context: "Blogging platform",
     description:
-      "A blogging platform where users can write, edit, and share posts.",
+      "Personal full-stack project: a blogging platform built from scratch with Express, PostgreSQL, and a hand-crafted Bootstrap frontend.",
     caseStudy: likhSpireCaseStudy,
   },
 ];

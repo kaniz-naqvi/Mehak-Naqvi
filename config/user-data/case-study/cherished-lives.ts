@@ -29,10 +29,10 @@ export const cherishedLivesCaseStudy: CaseStudy = {
   bgImageUrl: "projects/case-study/cherished-lives.png",
 
   introduction:
-    "Cherished Lives started from a real need: a respectful, lasting place for families to remember and celebrate the people they have lost. The idea grew into a full memorial platform where families can create rich profiles, share memories, write tributes, and stay connected around the people who mattered most.",
+    "Cherished Lives is a memorial platform built for families to keep the memories of loved ones alive — rich tribute pages, photo and video galleries, and a space for friends and family to share remembrances. The platform is production-ready across staging and main branches, built end-to-end by me as the sole developer across three independently deployed applications.",
 
   overview:
-    "I worked on the full-stack development of Cherished Lives, building the entire system across three separate applications — the public memorial site, an internal admin panel, and a dedicated admin API. My work covered authentication flows, profile management, media handling, access control, real-time updates, and the admin tooling used to manage users and content behind the scenes.",
+    "As the sole developer, I built Cherished Lives end-to-end across three separate applications — the public memorial site, an internal admin panel, and a dedicated admin API. My work covered authentication flows, profile management, media handling, access control, real-time updates, and the admin tooling used to manage users and content behind the scenes.",
 
   overviewImage: "/projects/case-study/cherished-lives-overview.png",
 
@@ -133,7 +133,7 @@ export const cherishedLivesCaseStudy: CaseStudy = {
   outcomes: [
     {
       value: "3 apps",
-      desc: "Built and maintained across the public platform, admin UI, and admin API",
+      desc: "Built sole-developer across the public platform, admin UI, and admin API — all independently deployed",
     },
     {
       value: "4 languages",

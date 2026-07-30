@@ -4,10 +4,10 @@ export const prepAndPlateCaseStudy: CaseStudy = {
   bgImageUrl: "projects/case-study/prep-plate.webp",
 
   introduction:
-    "Prep & Plate is a SaaS platform designed to help users plan meals and manage recipes efficiently. My contribution focused on improving the mobile experience by transforming an existing desktop interface into a responsive, app-like layout.",
+    "Prep & Plate is a SaaS meal planning platform. I joined as a contract frontend developer alongside an existing backend team. My engagement had a single clear focus: the application was built desktop-first and mobile users had a broken experience. I was brought in to fix that — transforming every screen into a responsive, app-like layout without touching the backend.",
 
   overview:
-    "The platform was originally designed for desktop users, which made navigation and usability challenging on smaller devices. I was responsible for adapting the interface to work seamlessly across screen sizes while maintaining the existing functionality and structure.",
+    "The platform had been built for large screens, which left mobile users with cramped layouts, poor navigation, and unusable interactions on smaller devices. Working within the existing React and Redux Toolkit codebase, I took full ownership of the mobile experience — adapting every screen to work naturally across devices while preserving the existing functionality and backend integration.",
 
   overviewImage: "/projects/prep-plate.webp",
 

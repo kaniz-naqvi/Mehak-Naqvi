@@ -10,10 +10,12 @@ import { projects, ProjectItem } from "@/config/user-data/projects";
 import Button from "../ui/Button";
 import Loader from "../ui/Loader";
 
-const ProjectsSection = forwardRef<HTMLElement, object>(
-  (props, ref: Ref<HTMLElement>) => {
+const ProjectsSection = forwardRef<
+  HTMLElement,
+  { showAllByDefault?: boolean }
+>(({ showAllByDefault = false }, ref: Ref<HTMLElement>) => {
     const [selectedFilter, setSelectedFilter] = useState("All");
-    const [showAll, setShowAll] = useState(false);
+    const [showAll, setShowAll] = useState(showAllByDefault);
     const [isNavigating, setIsNavigating] = useState(false);
     console.log("showAll", showAll);
 

@@ -120,10 +120,10 @@ const aboutData: AboutData = {
   hero: {
     headline: "Turning Ideas Into High Performing Digital Products",
     highlightedWords: ["Ideas Into", "Digital Products"], // Optional: words in headline to highlight
-    primaryCtaText: "Start a Project",
-    primaryCtaLink: "mailto:mehak313naqvi@gmail.com?subject=Project%20Inquiry",
-    secondaryCtaText: "Book a Call",
-    secondaryCtaLink: "https://calendar.app.google/fpRU2qDXNfbg4BSK8",
+    primaryCtaText: "Book a Call",
+    primaryCtaLink: "https://calendar.app.google/fpRU2qDXNfbg4BSK8",
+    secondaryCtaText: "Start a Project",
+    secondaryCtaLink: "mailto:mehak313naqvi@gmail.com?subject=Project%20Inquiry",
     heroPara:
       "I help startups and product teams build full-stack web applications — from database design and backend APIs to responsive, polished frontends. Available for freelance projects.",
   },
@@ -203,6 +203,7 @@ const aboutData: AboutData = {
       label: "UX research",
       link: "https://www.linkedin.com/posts/miss-kniz_ux-case-study-activity-7418323928466759680-f9Rs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8jni4BG4LSmzJu37NqVgJEe4-VukWZPpA",
     },
+    { label: "Blogging", link: "https://medium.com/@miss-kniz" },
     { label: "Experimenting with AI tools", link: "" },
     { label: "Learning new tech", link: "" },
     { label: "Scrolling LinkedIn", link: "https://www.linkedin.com/miss-kniz" },
