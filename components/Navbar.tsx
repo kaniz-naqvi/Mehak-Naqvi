@@ -93,7 +93,7 @@ export default function Navbar({
     About: "/#about",
     Projects: "/projects",
     Services: "/services",
-    Skills: "/",
+    Skills: "/#skills",
   };
 
   const handleNavClick = (item: string) => {

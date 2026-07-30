@@ -157,8 +157,8 @@ export default async function ProjectPage({
         </div>
 
         {/* ── INTRODUCTION — no image */}
-        <div className="bg-primary-light">
-          <div className="max-w-7xl mx-auto px-4 py-4 relative overflow-hidden">
+        <div className="bg-primary-light overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 py-4 relative">
             <Reveal className="my-12 relative z-10" delay={0.08}>
               <Heading as="h2" highlightText="Introduction" />
               <SimplePara className="max-w-2xl text-center md:text-left">

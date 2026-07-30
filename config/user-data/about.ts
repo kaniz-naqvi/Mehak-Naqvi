@@ -125,7 +125,7 @@ const aboutData: AboutData = {
     secondaryCtaText: "Start a Project",
     secondaryCtaLink: "mailto:mehak313naqvi@gmail.com?subject=Project%20Inquiry",
     heroPara:
-      "I help startups and product teams build full-stack web applications — from database design and backend APIs to responsive, polished frontends. Available for freelance projects.",
+      "I help startups and product teams build full-stack web applications: from database design and backend APIs to responsive, polished frontends. Available for freelance projects.",
   },
 
   // ---------- About Me Section ----------
@@ -135,7 +135,7 @@ const aboutData: AboutData = {
       highlightedText: "to strong {Developer}",
     },
     paragraphs: [
-      "I'm Mehak, a Full-Stack Developer who genuinely enjoys the puzzle of building things that work beautifully end-to-end. From designing a database schema to shipping a polished frontend — I handle the full stack, and I still get excited when a performance fix shreds load time.",
+      "I'm Mehak, a Full-Stack Developer who genuinely enjoys the puzzle of building things that work beautifully end-to-end. From designing a database schema to shipping a polished frontend, I handle the full stack, and I still get excited when a performance fix shreds load time.",
       "When I'm not coding, you'll find me watching K-dramas, exploring nature, or doing what I love most, sitting on the rooftop at evening with a cup of milk tea, watching the world slow down. That quiet is where my best ideas come from.",
     ],
     skills: ["React", "TypeScript", "TailwindCSS", "Node.js", "Next.js"],

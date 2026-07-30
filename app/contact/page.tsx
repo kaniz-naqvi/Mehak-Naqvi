@@ -26,7 +26,7 @@ export default function ContactPage() {
       <main className="pt-24 pb-8 px-2">
         <ContactSection />
       </main>
-      <Footer />
+      <Footer portfolioForJob={false} />
     </div>
   );
 }
