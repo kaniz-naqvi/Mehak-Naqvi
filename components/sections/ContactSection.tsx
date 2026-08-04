@@ -12,8 +12,8 @@ import { Reveal, Stagger, StaggerItem } from "../motion/Reveal";
 
 const ContactSection: React.FC = () => {
   const { contact, hero } = aboutData;
-  const ctaText = hero.secondaryCtaText;
-  const ctaLink = hero.secondaryCtaLink;
+  const ctaText = hero.primaryCtaText;
+  const ctaLink = hero.primaryCtaLink;
   const [form, setForm] = useState({
     name: "",
     email: "",

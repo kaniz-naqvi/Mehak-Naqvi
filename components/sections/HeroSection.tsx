@@ -58,26 +58,15 @@ const HeroSection = forwardRef<HTMLElement, { portfolioForJob: boolean }>(
                       </p>
                     </div>
                   ) : (
-                    <div className="flex flex-col items-center gap-2 relative justify-center">
-                      <span className="hidden md:inline-block py-1 px-2 rounded-full bg-white">
-                        <Star
-                          weight="fill"
-                          className="w-4 h-4 text-yellow-500"
-                        />
-                      </span>
-
-                      <Star weight="fill" className="text-yellow-500 w-5 h-5" />
-
-                      <div className="md:hidden absolute -top-5 flex text-yellow-500 text-lg">
-                        <Star weight="fill" />
-                        <Star weight="fill" />
-                      </div>
-
-                      {highlightText(
-                        topText,
-                        "text-green-500",
-                        highlightsFromTopText,
-                      )}
+                    <div className="flex items-center justify-center gap-2">
+                      <Star weight="fill" className="w-4 h-4 text-yellow-500" />
+                      <p className="tracking-wider">
+                        {highlightText(
+                          topText,
+                          "text-green-500",
+                          highlightsFromTopText,
+                        )}
+                      </p>
                     </div>
                   )}
                 </SubHeadingContainer>

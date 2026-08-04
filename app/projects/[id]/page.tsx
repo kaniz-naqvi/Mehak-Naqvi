@@ -113,7 +113,7 @@ export default async function ProjectPage({
           />
 
           <div className="relative h-full z-10">
-            <div className="h-full w-full bg-linear-to-t text-center from-background via-background/50 to-background/50 flex flex-col items-center justify-between">
+            <div className="h-full w-full bg-linear-to-t text-center from-background via-background/80 to-background/20 flex flex-col items-center justify-between">
               <div className="w-full">
                 <Navbar
                   backToProjects={true}
@@ -123,13 +123,13 @@ export default async function ProjectPage({
                 />
               </div>
 
-              <Reveal delay={0.12} className="flex flex-col items-center gap-3">
+              <Reveal delay={0.12} className="flex flex-col items-center gap-3 drop-shadow-lg">
                 <Heading
                   normalText={project.title}
                   as="h1"
                   className="text-center"
                 />
-                <SimplePara>
+                <SimplePara className="text-foreground/90">
                   <TextReveal text={project.description || ""} delay={0.12} />
                 </SimplePara>
               </Reveal>
@@ -159,31 +159,29 @@ export default async function ProjectPage({
         {/* ── INTRODUCTION — no image */}
         <div className="bg-primary-light">
           <div className="max-w-7xl mx-auto px-4 py-4 relative overflow-hidden">
-            <Reveal className="my-12" delay={0.08}>
+            <Reveal className="my-12 relative z-10" delay={0.08}>
               <Heading as="h2" highlightText="Introduction" />
               <SimplePara className="max-w-2xl text-center md:text-left">
                 <TextReveal text={caseStudy?.introduction || ""} delay={0.14} />
               </SimplePara>
-              <div className="mx-auto text-center">
-                <Button
-                  variant="secondary"
-                  className="my-4 md:mb-8"
-                  disabled={!(project.liveUrl || project.githubUrl)}
-                >
+              {(project.liveUrl || project.githubUrl) && (
+                <div className="mx-auto text-center">
                   <a
                     href={project.liveUrl || project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {label}
-                    <i className="ri-arrow-right-up-line" />
+                    <Button variant="secondary" className="my-4 md:mb-8">
+                      {label}
+                      <i className="ri-arrow-right-up-line" />
+                    </Button>
                   </a>
-                </Button>
-              </div>
+                </div>
+              )}
             </Reveal>
-            <h3 className="pointer-events-none select-none absolute tracking-tight leading-none text-6xl md:text-[12rem] whitespace-nowrap font-extrabold md:-bottom-20 left-0 -bottom-5 opacity-50 text-primary-dark">
+            <p className="pointer-events-none select-none absolute tracking-tight leading-none text-6xl md:text-[12rem] whitespace-nowrap font-extrabold bottom-0 left-0 opacity-10 text-primary-dark">
               {project.title}
-            </h3>
+            </p>
           </div>
         </div>
 
@@ -284,7 +282,7 @@ export default async function ProjectPage({
 
             <div className="max-w-full">
               {caseStudy.architecture?.structure ? (
-                <pre className="text-sm font-mono bg-zinc-900 text-zinc-100 p-4 rounded-xl overflow-x-auto whitespace-pre max-w-full">
+                <pre className="text-sm font-mono bg-zinc-900 text-zinc-100 p-4 rounded-xl overflow-auto whitespace-pre max-h-80 max-w-full code-block">
                   {caseStudy.architecture.structure}
                 </pre>
               ) : null}

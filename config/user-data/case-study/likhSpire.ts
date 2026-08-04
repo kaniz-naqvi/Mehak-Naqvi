@@ -4,10 +4,10 @@ export const likhSpireCaseStudy: CaseStudy = {
   bgImageUrl: "projects/case-study/likhspire.webp",
 
   introduction:
-    "LikhSpire is a full-stack blog platform that allows users to create, manage, and explore blog posts. It was built as a capstone project during a full-stack development bootcamp, with a strong focus on backend systems and database design.",
+    "LikhSpire is a personal full-stack project: a blogging platform I built to go beyond tutorials and practice real backend architecture. The goal was to design and wire up a complete system from scratch: a relational database, a REST API, and a working frontend, all built and integrated by hand.",
 
   overview:
-    "This project focuses on building a complete blogging system with authentication-like behavior, CRUD operations, and PostgreSQL integration. The frontend was designed using Bootstrap without templates to practice layout design and UI structuring.",
+    "I designed and built the entire application solo: PostgreSQL schema, Express REST API, and a Bootstrap frontend without templates. The project is intentionally backend-heavy: the focus was on how data flows through a system, how a REST API is structured, and how the frontend consumes it. Building the frontend without a component library or template forced clean layout thinking from first principles.",
 
   overviewImage: "/projects/likhspire.webp",
 

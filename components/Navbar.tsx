@@ -86,6 +86,25 @@ export default function Navbar({
     }, 100);
   };
 
+  const isHome = pathname === "/";
+
+  const navRoutes: Record<string, string> = {
+    Home: "/",
+    About: "/#about",
+    Projects: "/projects",
+    Services: "/services",
+    Skills: "/",
+  };
+
+  const handleNavClick = (item: string) => {
+    if (isHome) {
+      scrollTo(item.toLowerCase());
+      setActiveNav(item);
+    } else {
+      router.push(navRoutes[item] || "/");
+    }
+  };
+
   const goToProjects = () => {
     router.push("/");
     setTimeout(() => {
@@ -117,7 +136,7 @@ export default function Navbar({
               navItems.map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollTo(item.toLowerCase())}
+                  onClick={() => handleNavClick(item)}
                   className={`relative px-4 py-2 rounded-full font-medium text-sm md:text-base transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-px after:origin-center after:scale-x-0 after:bg-primary/40 after:transition-transform after:duration-300 hover:after:scale-x-100 ${
                     activeNav === item
                       ? "glass-btn text-foreground border border-gray-200"

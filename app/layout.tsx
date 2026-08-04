@@ -85,7 +85,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased">
+      <body className="antialiased" suppressHydrationWarning>
         <RouteTransition>{children}</RouteTransition>
 
         {/* Structured Data: inline so crawlers read it from initial HTML */}

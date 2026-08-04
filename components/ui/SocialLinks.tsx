@@ -23,7 +23,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
 }) => {
   return (
     <div className={cn("flex flex-wrap gap-4", className)}>
-      {links.map((social) => (
+      {links.filter((social) => social.url).map((social) => (
         <Button
           key={social.platform}
           size={size}

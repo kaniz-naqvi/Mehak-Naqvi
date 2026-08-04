@@ -4,10 +4,10 @@ export const leadlyftCaseStudy: CaseStudy = {
   bgImageUrl: "projects/case-study/leadlyft.jpg",
 
   introduction:
-    "LeadLyft started as a simple idea: help high-performance professionals track their growth and make better decisions with structured coaching. Over time, it evolved into a full SaaS platform connecting coaches, clients, and organizations in one system.",
+    "LeadLyft was built by an independent life and performance coach who wanted a real product, not a patchwork of spreadsheets and booking tools, to manage their clients and grow their practice. What started as a single-coach platform grew into a multi-coach SaaS with 500+ registered users, monthly subscription plans for individuals, and enterprise licenses sold to companies for their employees.",
 
   overview:
-    "I worked on the frontend development of LeadLyft, contributing to the architecture and building key parts of the system from the ground up. This included designing scalable UI structures, integrating APIs, handling complex state management, and building dashboard and coaching workflows that needed to stay simple for users while handling complex data behind the scenes.",
+    "I joined the project after the initial MVP was shipped and took ownership of the frontend architecture as the product scaled. My work covered building out the coaching and analytics workflows, standardizing the component system across the application, integrating APIs, handling complex state management, and improving performance as the feature set and user base grew.",
 
   overviewImage: "/projects/case-study/leadlyft-overview.png",
 
@@ -90,20 +90,20 @@ utils/
 
   outcomes: [
     {
-      value: "5 roles",
-      desc: "Supported in the platform across coaches, clients, practitioners, and admins",
+      value: "500+",
+      desc: "Registered users on the platform across coaches, clients, and organizations",
     },
     {
-      value: "3 zones",
-      desc: "Tracked across Work, Relationships, and Personal life areas in real time",
+      value: "5 roles",
+      desc: "Coaches, clients, practitioners, organizations, and admins across one system",
     },
     {
       value: "B2B + B2C",
-      desc: "Supported within a single scalable SaaS platform",
+      desc: "Monthly user subscriptions alongside enterprise plans sold to companies for their employees",
     },
     {
       value: "6-figure",
-      desc: "revenue supported through organizations using the platform",
+      desc: "Revenue run-rate supported through enterprise organization plans",
     },
   ],
 

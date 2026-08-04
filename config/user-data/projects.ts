@@ -2,6 +2,7 @@ import {
   CaseStudy,
   cherishedLivesCaseStudy,
 } from "./case-study/cherished-lives";
+import { echomeCaseStudy } from "./case-study/echome";
 import { leadlyftCaseStudy } from "./case-study/leadlyft";
 import { likhSpireCaseStudy } from "./case-study/likhSpire";
 import { prepAndPlateCaseStudy } from "./case-study/prep&plate";
@@ -54,32 +55,32 @@ export const TECH_STACK = {
 
 export const projects: ProjectItem[] = [
   {
-    id: "leadlyft",
-    title: "LeadLyft",
+    id: "echome",
+    title: "EchoMe",
     categories: ["Full-stack", "SaaS"],
-    imageUrl: "projects/3.webp",
+    imageUrl: "projects/echome.png",
     technologies: [
+      TECH_STACK.nextjs,
       TECH_STACK.react,
       TECH_STACK["redux toolkit"],
       TECH_STACK["rtk query"],
-      TECH_STACK.pusher,
-      TECH_STACK.css,
-      TECH_STACK.prisma,
-      TECH_STACK.mui,
+      TECH_STACK.typescript,
       TECH_STACK.tailwind,
-      TECH_STACK.nodejs,
-      TECH_STACK.express,
+      TECH_STACK.prisma,
+      TECH_STACK.postgresql,
+      TECH_STACK.nextauth,
+      TECH_STACK.shadcn,
     ],
-    liveUrl: undefined,
+    liveUrl: "https://echo-me-brown.vercel.app",
     githubUrl: undefined,
-    previewImage: "projects/leadlyft-preview-v3.png",
-    isClientProject: true,
+    previewImage: "projects/echome-preview.png",
+    isClientProject: false,
+    role: "Lead Full-Stack Developer",
+    period: "2026 – Present",
+    context: "SaaS Product",
     description:
-      "A coaching platform for executives to improve work and life performance.",
-    role: "Frontend-focused full-stack Developer",
-    context: "Website development",
-    period: "Early 2025",
-    caseStudy: leadlyftCaseStudy,
+      "A resume builder that turns a blank page into a polished, shareable resume in minutes, built for job seekers who need to make a strong first impression.",
+    caseStudy: echomeCaseStudy,
   },
   {
     id: "cherished-lives",
@@ -104,13 +105,40 @@ export const projects: ProjectItem[] = [
     previewImage: "projects/cherished-lives-preview.png",
     isClientProject: true,
     description:
-      "An online memorial platform where users can keep the memories of loved ones.",
+      "A multi-tenant memorial platform built sole-developer across 3 apps (public site, admin UI, and admin API) with multilingual support and white-label architecture.",
     role: "Full-stack Developer",
     context: "Web application development",
     period: "2025 – Present",
     caseStudy: cherishedLivesCaseStudy,
   },
-
+  {
+    id: "leadlyft",
+    title: "LeadLyft",
+    categories: ["Full-stack", "SaaS"],
+    imageUrl: "projects/3.webp",
+    technologies: [
+      TECH_STACK.react,
+      TECH_STACK["redux toolkit"],
+      TECH_STACK["rtk query"],
+      TECH_STACK.pusher,
+      TECH_STACK.css,
+      TECH_STACK.prisma,
+      TECH_STACK.mui,
+      TECH_STACK.tailwind,
+      TECH_STACK.nodejs,
+      TECH_STACK.express,
+    ],
+    liveUrl: "https://leadlyft.com/",
+    githubUrl: undefined,
+    previewImage: "projects/leadlyft-preview-v3.png",
+    isClientProject: true,
+    description:
+      "A coaching SaaS built for a life coach who needed a real product to manage 500+ clients and sell enterprise plans to companies.",
+    role: "Frontend-focused full-stack Developer",
+    context: "Website development",
+    period: "Early 2025",
+    caseStudy: leadlyftCaseStudy,
+  },
   {
     id: "prep-and-plate",
     title: "Prep & Plate",
@@ -127,7 +155,7 @@ export const projects: ProjectItem[] = [
     period: "Late 2024",
     context: "Desktop → Mobile UX",
     description:
-      "A web app that helps users plan daily meals and recipes easily.",
+      "Contract frontend role: transformed a desktop-only meal planning SaaS into a fully responsive mobile experience.",
     caseStudy: prepAndPlateCaseStudy,
   },
   {
@@ -154,7 +182,7 @@ export const projects: ProjectItem[] = [
     period: "Mid 2025",
     context: "Blogging platform",
     description:
-      "A blogging platform where users can write, edit, and share posts.",
+      "Personal full-stack project: a blogging platform built from scratch with Express, PostgreSQL, and a hand-crafted Bootstrap frontend.",
     caseStudy: likhSpireCaseStudy,
   },
 ];
