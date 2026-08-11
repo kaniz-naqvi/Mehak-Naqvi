@@ -123,9 +123,10 @@ const aboutData: AboutData = {
     primaryCtaText: "Book a Call",
     primaryCtaLink: "https://calendar.app.google/fpRU2qDXNfbg4BSK8",
     secondaryCtaText: "Start a Project",
-    secondaryCtaLink: "mailto:mehak313naqvi@gmail.com?subject=Project%20Inquiry",
+    secondaryCtaLink:
+      "mailto:mehak313naqvi@gmail.com?subject=Project%20Inquiry",
     heroPara:
-      "I help startups and product teams build full-stack web applications: from database design and backend APIs to responsive, polished frontends. Available for freelance projects.",
+      "I help startups and product teams build full-stack web applications, from database design and backend APIs to responsive, polished frontends. Available for freelance projects.",
   },
 
   // ---------- About Me Section ----------

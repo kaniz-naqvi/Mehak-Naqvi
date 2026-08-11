@@ -85,6 +85,8 @@ For Job or Freelancing
 export const portfolioForJob = true; // if false that will show service section instead of skills section
 ```
 
+> Setting up for freelance work? See the full guide: [docs/FREELANCER-GUIDE.md](./docs/FREELANCER-GUIDE.md)
+
 About data
 
 ```typescript

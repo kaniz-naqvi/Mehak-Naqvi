@@ -47,7 +47,7 @@ export default function HomePage() {
 
       {!portfolioForJob && <FAQSection />}
 
-      {!portfolioForJob && <ContactSection />}
+      <ContactSection />
 
       <Footer portfolioForJob={portfolioForJob} />
       <BottomNav

@@ -4,6 +4,7 @@ import Footer from "@/components/ui/Footer";
 import Heading from "@/components/ui/Heading";
 import { SimplePara } from "@/components/ui/SubHeadingContainer";
 import { highlightTechs, projects } from "@/config/user-data/projects";
+import aboutData from "@/config/user-data/about";
 import Link from "next/link";
 
 const BASE_URL = (
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `${BASE_URL}/projects/${project.id}`;
 
   return {
-    title: `${project.title} | Miss Kniz Portfolio`,
+    title: `${project.title} | ${aboutData.alias || aboutData.name}`,
     description: project.description,
     alternates: {
       canonical: canonicalUrl,
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: previewImageUrl,
           width: 1200,
           height: 630,
-          alt: `${project.title} — Case Study by Mehak Fatima Naqvi`,
+          alt: `${project.title}: Case Study by ${aboutData.name}`,
         },
       ],
       type: "article",

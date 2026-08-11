@@ -41,7 +41,7 @@ export const cherishedLivesCaseStudy: CaseStudy = {
       "The platform is a monorepo with three independently deployed apps. The main app handles everything users see and interact with. The admin backend is a dedicated Express API for internal operations. Each app owns its own dependencies, and the shared MongoDB database is accessed through Prisma with strict per-tenant scoping.",
 
     structure: `apps/
-  main-app/           (Next.js 16, App Router — public site + dashboard)
+  main-app/           (Next.js 16, App Router - public site + dashboard)
     app/
       api/v1/         (REST API routes per resource)
       auth/           (login, register, verify, reset)
@@ -60,8 +60,8 @@ export const cherishedLivesCaseStudy: CaseStudy = {
       prisma.ts       (singleton client)
     messages/         (en, es, fr, de translations)
 
-  admin-app/          (Next.js 16 — internal admin UI)
-  admin-backend/      (Express 5 — admin REST API + media processing)`,
+  admin-app/          (Next.js 16 - internal admin UI)
+  admin-backend/      (Express 5 - admin REST API + media processing)`,
   },
 
   challenges: [

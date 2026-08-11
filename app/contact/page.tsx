@@ -2,19 +2,22 @@ import Navbar from "@/components/Navbar";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/ui/Footer";
 import { Metadata } from "next";
+import aboutData from "@/config/user-data/about";
+
+const BASE_URL = (
+  process.env.NEXT_PUBLIC_BASE_URL || "https://mehak-naqvi.vercel.app"
+).replace(/\/$/, "");
 
 export const metadata: Metadata = {
-  title: "Contact | Miss Kniz — Freelance Full-Stack Developer",
-  description:
-    "Get in touch with Mehak Fatima Naqvi for freelance full-stack web development projects. Book a call or send a message — available for remote work.",
+  title: `Contact | ${aboutData.alias || aboutData.name}`,
+  description: `Get in touch with ${aboutData.name} for freelance web development projects. Book a call or send a message, available for remote work.`,
   alternates: {
-    canonical: "https://mehak-naqvi.vercel.app/contact",
+    canonical: `${BASE_URL}/contact`,
   },
   openGraph: {
-    title: "Contact | Miss Kniz — Freelance Full-Stack Developer",
-    description:
-      "Available for remote freelance projects. Book a discovery call or drop a message — let's discuss your project.",
-    url: "https://mehak-naqvi.vercel.app/contact",
+    title: `Contact | ${aboutData.alias || aboutData.name}`,
+    description: `Available for remote freelance projects. Book a discovery call or drop a message.`,
+    url: `${BASE_URL}/contact`,
     type: "website",
   },
 };
