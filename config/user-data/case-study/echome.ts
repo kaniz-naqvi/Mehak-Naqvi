@@ -17,15 +17,15 @@ export const echomeCaseStudy: CaseStudy = {
 
     structure: `app/
   auth/           (login, signup, email verify, reset)
-  editor/[id]/    (live resume editor — works unauthenticated)
+  editor/[id]/    (live resume editor - works unauthenticated)
   dashboard/      (protected: home, templates, admin)
   preview/        (public resume sharing by URL)
   landing/        (marketing page)
   api/            (auth, resumes, export, admin routes)
 
 components/
-  atoms/          (Button, Input, Badge — primitives)
-  molecules/      (FormField, Card — compound)
+  atoms/          (Button, Input, Badge - primitives)
+  molecules/      (FormField, Card - compound)
   organisms/      (editor toolbar, resume sections)
   templates/      (Brand, Minimal, Classic + registry)
 

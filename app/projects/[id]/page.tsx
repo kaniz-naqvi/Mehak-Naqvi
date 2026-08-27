@@ -4,6 +4,7 @@ import Footer from "@/components/ui/Footer";
 import Heading from "@/components/ui/Heading";
 import { SimplePara } from "@/components/ui/SubHeadingContainer";
 import { highlightTechs, projects } from "@/config/user-data/projects";
+import aboutData from "@/config/user-data/about";
 import Link from "next/link";
 
 const BASE_URL = (
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `${BASE_URL}/projects/${project.id}`;
 
   return {
-    title: `${project.title} | Miss Kniz Portfolio`,
+    title: `${project.title} | ${aboutData.alias || aboutData.name}`,
     description: project.description,
     alternates: {
       canonical: canonicalUrl,
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: previewImageUrl,
           width: 1200,
           height: 630,
-          alt: `${project.title} — Case Study by Mehak Fatima Naqvi`,
+          alt: `${project.title}: Case Study by ${aboutData.name}`,
         },
       ],
       type: "article",
@@ -157,8 +158,8 @@ export default async function ProjectPage({
         </div>
 
         {/* ── INTRODUCTION — no image */}
-        <div className="bg-primary-light">
-          <div className="max-w-7xl mx-auto px-4 py-4 relative overflow-hidden">
+        <div className="bg-primary-light overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 py-4 relative">
             <Reveal className="my-12 relative z-10" delay={0.08}>
               <Heading as="h2" highlightText="Introduction" />
               <SimplePara className="max-w-2xl text-center md:text-left">

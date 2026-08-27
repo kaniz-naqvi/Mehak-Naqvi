@@ -73,7 +73,7 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: `${aboutData.name} — Full Stack Developer Portfolio`,
+    name: `${aboutData.name} | Full Stack Developer Portfolio`,
     url: BASE_URL,
     description: `Portfolio and freelance services of ${aboutData.name}${aboutData.alias ? ` (${aboutData.alias})` : ""}, a Full-Stack Developer specializing in React, Next.js, Node.js, and PostgreSQL.`,
     author: {
